@@ -1,11 +1,14 @@
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { BellIcon, UserCircleIcon } from '@heroicons/react/24/solid';
+import { useUiContext } from '../../context/ui-context';
 
 const TopNav = () => {
+  const { toggleSidebar } = useUiContext();
+
   return (
-    <header className="flex justify-between py-3 px-10 shadow text-gray-500">
+    <header className="flex justify-between py-4 px-10 shadow text-gray-500">
       <div className="flex gap-4 items-center">
-        <button type="button">
+        <button type="button" onClick={() => toggleSidebar()}>
           <Bars3Icon className="h-6 w-6" />
         </button>
         <h1 className="text-lg font-semibold">Constructor</h1>
