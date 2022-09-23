@@ -11,7 +11,7 @@ const TopNav = () => {
         <button type="button" onClick={() => toggleSidebar()}>
           <Bars3Icon className="h-6 w-6" />
         </button>
-        <h1 className="text-lg font-semibold">Constructor</h1>
+        <p className="text-lg font-semibold">Constructor</p>
       </div>
       <div className="flex gap-4 items-center">
         <button type="button">

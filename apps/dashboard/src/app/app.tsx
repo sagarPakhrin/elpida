@@ -1,7 +1,11 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import DefaultLayout from '../layouts/default-layout';
 
-const Dashboard = () => <div>Dashboard</div>;
+const Dashboard = () => (
+  <div>
+    <h1>Welcome to Dashboard</h1>
+  </div>
+);
 
 export function App() {
   return (
