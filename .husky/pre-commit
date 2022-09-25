@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx prettier --check . && npx nx affected --target=lint --parallel=3 --verbosee
+nx format:check && npx nx affected --target=lint --parallel=3 --verbosee

@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render } from '../utils/test-utils';
 
 import App from './app';
 
@@ -7,11 +7,12 @@ describe('App', () => {
     const { baseElement } = render(<App />);
 
     expect(baseElement).toBeTruthy();
+    expect(baseElement).toMatchSnapshot();
   });
 
   it('should have a greeting as the title', () => {
     const { getByText } = render(<App />);
 
-    expect(getByText(/Welcome dashboard/gi)).toBeTruthy();
+    expect(getByText(/Welcome to dashboard/i)).toBeTruthy();
   });
 });
