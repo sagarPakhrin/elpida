@@ -12,3 +12,9 @@ cd elpida
 npm i
 npm start
 ```
+
+## Techstacks
+
+1. React (frontend)
+2. tailwindcss (css)
+3. nx (monorepo)
