@@ -6,12 +6,11 @@ const TopNav = () => {
   const { toggleSidebar } = useUiContext();
 
   return (
-    <header className="flex justify-between py-4 px-10 shadow text-gray-500">
+    <header className="flex justify-between py-3 px-10 shadow text-gray-500 bg-white sticky z-20">
       <div className="flex gap-4 items-center">
         <button type="button" onClick={() => toggleSidebar()}>
           <Bars3Icon className="h-6 w-6" />
         </button>
-        <p className="text-lg font-semibold">Constructor</p>
       </div>
       <div className="flex gap-4 items-center">
         <button type="button">
