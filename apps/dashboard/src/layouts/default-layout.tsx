@@ -8,7 +8,7 @@ const DefaultLayout = () => {
       <Sidebar />
       <div className="flex flex-1 flex-col overflow-y-auto">
         <TopNav />
-        <div className="flex-1">
+        <div className="flex-1 py-8 px-10">
           <Outlet />
         </div>
       </div>

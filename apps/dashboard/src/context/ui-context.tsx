@@ -1,4 +1,10 @@
-import { createStrictContext, useLocalStorage } from '@elpida/ui';
+/* eslint-disable react-hooks/exhaustive-deps */
+import {
+  createStrictContext,
+  useLocalStorage,
+  useWindowSize,
+} from '@elpida/ui';
+import { useEffect } from 'react';
 
 export interface UiState {
   sidebarOpen: boolean;
@@ -20,6 +26,8 @@ const UiProvider = (props: any) => {
     theme: 'light',
   });
 
+  const { innerWidth } = useWindowSize();
+
   const toggleSidebar = (value?: boolean) => {
     setUiState((prev) => ({
       ...prev,
@@ -34,6 +42,12 @@ const UiProvider = (props: any) => {
   const closeSidebar = () => {
     toggleSidebar(false);
   };
+
+  useEffect(() => {
+    if (innerWidth < 1280) {
+      closeSidebar();
+    }
+  }, [innerWidth]);
 
   return (
     <Provider
