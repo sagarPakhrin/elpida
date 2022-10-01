@@ -4,10 +4,10 @@ exports[`App should render successfully 1`] = `
 <body>
   <div>
     <div
-      class="h-screen w-full flex bg-gray-50"
+      class="h-screen w-full flex bg-gray-100"
     >
       <aside
-        class="py-3 h-full border-r bg-teal-900  text-gray-300  border-gray-200 flex flex-col items-center justify-between transition-all duration-300 w-64"
+        class="py-3 h-full border-r bg-teal-900  text-gray-300  border-gray-200 flex flex-col items-center justify-between transition-all duration-300 w-20"
       >
         <div
           class="w-full"
@@ -17,7 +17,7 @@ exports[`App should render successfully 1`] = `
             href="/"
           >
             <span
-              class=""
+              class="w-4 overflow-hidden"
             >
               Constructor
             </span>
@@ -27,7 +27,7 @@ exports[`App should render successfully 1`] = `
           >
             <a
               aria-current="page"
-              class="flex py-3 px-4 rounded hover:bg-teal-800 gap-3 text-sm items-center bg-teal-800"
+              class="flex py-3 px-4 rounded hover:bg-teal-800 gap-3 text-sm items-center justify-center bg-teal-800"
               href="/dashboard"
             >
               <svg
@@ -45,10 +45,9 @@ exports[`App should render successfully 1`] = `
                   stroke-linejoin="round"
                 />
               </svg>
-              Dashboard
             </a>
             <a
-              class="flex py-3 px-4 rounded hover:bg-teal-800 gap-3 text-sm items-center"
+              class="flex py-3 px-4 rounded hover:bg-teal-800 gap-3 text-sm items-center justify-center"
               href="/products"
             >
               <svg
@@ -66,7 +65,6 @@ exports[`App should render successfully 1`] = `
                   stroke-linejoin="round"
                 />
               </svg>
-              Products
             </a>
           </div>
         </div>
@@ -74,7 +72,7 @@ exports[`App should render successfully 1`] = `
           class="w-full"
         >
           <button
-            class="w-full flex py-3 px-4 rounded gap-3 text-sm items-center hover:bg-teal-800"
+            class="w-full flex py-3 px-4 rounded gap-3 text-sm items-center hover:bg-teal-800 justify-center"
           >
             <svg
               aria-hidden="true"
@@ -91,7 +89,6 @@ exports[`App should render successfully 1`] = `
                 stroke-linejoin="round"
               />
             </svg>
-            Logout
           </button>
         </div>
       </aside>
@@ -164,13 +161,384 @@ exports[`App should render successfully 1`] = `
           </div>
         </header>
         <div
-          class="flex-1"
+          class="flex-1 py-8 px-3 lg:px-10"
         >
-          <div>
-            <h1>
-              Welcome to Dashboard
-            </h1>
-          </div>
+          <section
+            class="grid grid-cols-2 lg:grid-cols-4 gap-7"
+          >
+            <div
+              class="flex items-center px-3 lg:px-10 py-4"
+            >
+              <div
+                class="flex-shrink-0 w-8 lg:w-14 h-8 lg:h-14 rounded-full bg-zinc-900 flex items-center justify-center"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="text-gray-200 flex-shrink-0 h-4 lg:h-6 w-4 lg:w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div
+                class="pl-5"
+              >
+                <h3
+                  class="text-sm text-gray-700"
+                >
+                  Total Products
+                </h3>
+                <span
+                  class="text-lg lg:text-3xl font-extrabold text-gray-800"
+                >
+                  800
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center px-3 lg:px-10 py-4"
+            >
+              <div
+                class="flex-shrink-0 w-8 lg:w-14 h-8 lg:h-14 rounded-full bg-zinc-900 flex items-center justify-center"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="text-gray-200 flex-shrink-0 h-4 lg:h-6 w-4 lg:w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div
+                class="pl-5"
+              >
+                <h3
+                  class="text-sm text-gray-700"
+                >
+                  Total Users
+                </h3>
+                <span
+                  class="text-lg lg:text-3xl font-extrabold text-gray-800"
+                >
+                  512.3K
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center px-3 lg:px-10 py-4"
+            >
+              <div
+                class="flex-shrink-0 w-8 lg:w-14 h-8 lg:h-14 rounded-full bg-zinc-900 flex items-center justify-center"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="text-gray-200 flex-shrink-0 h-4 lg:h-6 w-4 lg:w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div
+                class="pl-5"
+              >
+                <h3
+                  class="text-sm text-gray-700"
+                >
+                  Total Sales
+                </h3>
+                <span
+                  class="text-lg lg:text-3xl font-extrabold text-gray-800"
+                >
+                  10K
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center px-3 lg:px-10 py-4"
+            >
+              <div
+                class="flex-shrink-0 w-8 lg:w-14 h-8 lg:h-14 rounded-full bg-zinc-900 flex items-center justify-center"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="text-gray-200 flex-shrink-0 h-4 lg:h-6 w-4 lg:w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div
+                class="pl-5"
+              >
+                <h3
+                  class="text-sm text-gray-700"
+                >
+                  Total Orders
+                </h3>
+                <span
+                  class="text-lg lg:text-3xl font-extrabold text-gray-800"
+                >
+                  3K
+                </span>
+              </div>
+            </div>
+          </section>
+          <section
+            class="mt-20"
+          >
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-10"
+            >
+              <div
+                class="bg-white px-8 py-10 flex justify-between items-center rounded-md"
+              >
+                <div
+                  class="flex-shrink-0 w-1/3 flex flex-col justify-between"
+                >
+                  <div>
+                    <h3
+                      class="text-2xl font-bold text-gray-700"
+                    >
+                      Weekly Sales
+                    </h3>
+                    <span
+                      class="text-sm text-red-600"
+                    >
+                      - 2,4203
+                    </span>
+                  </div>
+                  <p
+                    class="mt-6 text-lg"
+                  >
+                    10K
+                  </p>
+                </div>
+                <div
+                  class="w-2/3"
+                >
+                  <div>
+                    Chart
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white px-8 py-10 flex justify-between items-center rounded-md"
+              >
+                <div
+                  class="flex-shrink-0 w-1/3 flex flex-col justify-between"
+                >
+                  <div>
+                    <h3
+                      class="text-2xl font-bold text-gray-700"
+                    >
+                      Top Products
+                    </h3>
+                    <span
+                      class="text-sm"
+                    >
+                      Top sold products this week
+                    </span>
+                  </div>
+                  <p
+                    class="mt-6 text-lg"
+                  >
+                    29.5K
+                  </p>
+                </div>
+                <div
+                  class="w-2/3"
+                >
+                  <div>
+                    Chart
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10"
+          >
+            <div
+              class="px-8 py-10"
+            >
+              <div
+                class="flex justify-between items-center"
+              >
+                <h3
+                  class="text-2xl font-bold text-gray-700"
+                >
+                  Activities
+                </h3>
+                <a
+                  href="/dashboard"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div
+                class="mt-4 grid grid-flow gap-4"
+              >
+                <div
+                  class="p-4 rounded-md flex justify-between items-center"
+                >
+                  <p
+                    class="font-medium"
+                  >
+                    Ball
+                  </p>
+                  <span
+                    class=" text-teal-600"
+                  >
+                    $ 
+                    2.1K
+                  </span>
+                </div>
+                <div
+                  class="p-4 rounded-md flex justify-between items-center"
+                >
+                  <p
+                    class="font-medium"
+                  >
+                    Keyboard
+                  </p>
+                  <span
+                    class=" text-teal-600"
+                  >
+                    $ 
+                    5.3K
+                  </span>
+                </div>
+                <div
+                  class="p-4 rounded-md flex justify-between items-center"
+                >
+                  <p
+                    class="font-medium"
+                  >
+                    Bacon
+                  </p>
+                  <span
+                    class=" text-teal-600"
+                  >
+                    $ 
+                    5.1K
+                  </span>
+                </div>
+                <div
+                  class="p-4 rounded-md flex justify-between items-center"
+                >
+                  <p
+                    class="font-medium"
+                  >
+                    Salad
+                  </p>
+                  <span
+                    class=" text-teal-600"
+                  >
+                    $ 
+                    8.1K
+                  </span>
+                </div>
+                <div
+                  class="p-4 rounded-md flex justify-between items-center"
+                >
+                  <p
+                    class="font-medium"
+                  >
+                    Chicken
+                  </p>
+                  <span
+                    class=" text-teal-600"
+                  >
+                    $ 
+                    8.9K
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="px-8 py-10"
+            >
+              <div
+                class="flex justify-between items-center"
+              >
+                <h3
+                  class="text-2xl font-bold text-gray-700"
+                >
+                  Weekly Website visitors
+                </h3>
+                <a
+                  href="/dashboard"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div
+                class="mt-4 grid grid-flow gap-4"
+              >
+                <div>
+                  Chart
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
