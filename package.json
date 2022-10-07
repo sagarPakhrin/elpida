@@ -10,6 +10,7 @@
   "private": true,
   "dependencies": {
     "@faker-js/faker": "^7.5.0",
+    "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.11",
     "core-js": "^3.6.5",
     "date-fns": "^2.29.3",

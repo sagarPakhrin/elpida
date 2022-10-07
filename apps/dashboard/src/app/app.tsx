@@ -1,12 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import DefaultLayout from '../layouts/default-layout';
 import Dashboard from '../pages/dashboard';
-
-const Products = () => (
-  <div>
-    <h1>Products</h1>
-  </div>
-);
+import Products from '../pages/products';
 
 export function App() {
   return (
