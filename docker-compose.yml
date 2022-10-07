@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  # React App
+  dashboard:
+    extends:
+      file: docker-compose.base.yml
+      service: nx-base-app
+    container_name: dashboard_fe
+    command: npm start dashboard
+    ports:
+      - 3000:3000
