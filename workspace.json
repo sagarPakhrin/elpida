@@ -4,6 +4,7 @@
   "projects": {
     "api": "apps/api",
     "dashboard": "apps/dashboard",
+    "dashboard-api-shared": "libs/dashboard-api/shared",
     "dashboard-e2e": "apps/dashboard-e2e",
     "shared-utils": "libs/shared/utils",
     "ui": "libs/ui"
