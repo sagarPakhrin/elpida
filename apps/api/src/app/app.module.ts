@@ -1,7 +1,10 @@
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import { GraphQLModule } from '@nestjs/graphql';
 import * as Joi from 'joi';
-import { AppController } from './app.controller';
+import { ProductModule } from '../modules/products/product.module';
+import { AppResolver } from './app.resolver';
 import { AppService } from './app.service';
 
 @Module({
@@ -15,8 +18,13 @@ import { AppService } from './app.service';
         PORT: Joi.number().default(5000),
       }),
     }),
+    GraphQLModule.forRoot<ApolloDriverConfig>({
+      driver: ApolloDriver,
+      autoSchemaFile: true,
+    }),
+    ProductModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [AppService, AppResolver],
 })
 export class AppModule {}
