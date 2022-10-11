@@ -17,4 +17,19 @@ export class ProductService {
   ) {
     return this.prisma.product.findMany(args);
   }
+
+  async filterProducts<T extends Prisma.ProductFindManyArgs>(
+    args?: Prisma.SelectSubset<T, Prisma.ProductFindManyArgs>
+  ) {
+    const total = await this.prisma.product.count();
+    const data = await this.prisma.product.findMany(args);
+
+    return {
+      data,
+      meta: {
+        total,
+        itemsPerPage: args.take,
+      },
+    };
+  }
 }

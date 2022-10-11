@@ -21,7 +21,6 @@ const seedProducts = async (len = 100) => {
       slug: faker.datatype.string(32),
     });
   }
-  console.log(products);
   await prisma.product.createMany({
     data: products,
   });

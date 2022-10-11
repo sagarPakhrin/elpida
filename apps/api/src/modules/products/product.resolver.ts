@@ -1,12 +1,16 @@
-import { Product, ProductService } from '@elpida/dashboard-api/shared';
-import { Query, Resolver } from '@nestjs/graphql';
+import {
+  FindProductArgs,
+  PaginatedProducts,
+  ProductService,
+} from '@elpida/dashboard-api/shared';
+import { Args, Query, Resolver } from '@nestjs/graphql';
 
 @Resolver()
 export class ProductResolver {
   constructor(private readonly service: ProductService) {}
 
-  @Query(() => [Product])
-  products() {
-    return this.service.findMany();
+  @Query(() => PaginatedProducts)
+  products(@Args() args?: FindProductArgs): Promise<PaginatedProducts> {
+    return this.service.filterProducts(args);
   }
 }
