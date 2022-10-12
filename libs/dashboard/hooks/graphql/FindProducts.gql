@@ -1,0 +1,8 @@
+query products($take: Float, $skip: Float) {
+  products(take: $take, skip: $skip) {
+    data {
+      id
+      name
+    }
+  }
+}

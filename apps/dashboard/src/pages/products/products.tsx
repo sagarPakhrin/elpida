@@ -1,6 +1,14 @@
+import { useProductsQuery } from '@elpida/dashboard/hooks';
 import { ArrowDownTrayIcon, ArrowUpTrayIcon } from '@heroicons/react/20/solid';
 
 const Products = () => {
+  const { data } = useProductsQuery({
+    variables: {
+      take: 20,
+      skip: 0,
+    },
+  });
+
   return (
     <div className="h-full overflow-y-auto">
       <div className="flex justify-between">
@@ -24,7 +32,9 @@ const Products = () => {
           </button>
         </div>
       </div>
-      <div className="mt-8">ALl Products</div>
+      <div className="mt-8">
+        <pre>{JSON.stringify(data?.products.data, null, 2)}</pre>
+      </div>
     </div>
   );
 };
