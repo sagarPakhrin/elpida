@@ -10,7 +10,7 @@ export class ProductResolver {
   constructor(private readonly service: ProductService) {}
 
   @Query(() => PaginatedProducts)
-  products(@Args() args?: FindProductArgs): Promise<PaginatedProducts> {
+  products(@Args() args?: FindProductArgs) {
     return this.service.filterProducts(args);
   }
 }

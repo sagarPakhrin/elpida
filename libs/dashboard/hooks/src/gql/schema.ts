@@ -21,6 +21,16 @@ export type Scalars = {
   Float: number;
 };
 
+export type Category = {
+  __typename?: 'Category';
+  description: Scalars['String'];
+  id: Scalars['Int'];
+  meta_description: Scalars['String'];
+  meta_keywords: Scalars['String'];
+  name: Scalars['String'];
+  slug: Scalars['String'];
+};
+
 export type Paginated = {
   meta: PaginationMetaData;
 };
@@ -41,6 +51,12 @@ export type Product = {
   __typename?: 'Product';
   id: Scalars['Int'];
   name: Scalars['String'];
+  product_categories: Array<ProductCategories>;
+};
+
+export type ProductCategories = {
+  __typename?: 'ProductCategories';
+  category: Category;
 };
 
 export type Query = {
@@ -63,7 +79,15 @@ export type ProductsQuery = {
   __typename?: 'Query';
   products: {
     __typename?: 'PaginatedProducts';
-    data: Array<{ __typename?: 'Product'; id: number; name: string }>;
+    data: Array<{
+      __typename?: 'Product';
+      id: number;
+      name: string;
+      product_categories: Array<{
+        __typename?: 'ProductCategories';
+        category: { __typename?: 'Category'; name: string };
+      }>;
+    }>;
   };
 };
 
@@ -73,6 +97,11 @@ export const ProductsDocument = gql`
       data {
         id
         name
+        product_categories {
+          category {
+            name
+          }
+        }
       }
     }
   }

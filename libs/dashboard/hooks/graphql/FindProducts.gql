@@ -3,6 +3,11 @@ query products($take: Float, $skip: Float) {
     data {
       id
       name
+      product_categories {
+        category {
+          name
+        }
+      }
     }
   }
 }

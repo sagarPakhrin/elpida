@@ -22,7 +22,16 @@ export class ProductService {
     args?: Prisma.SelectSubset<T, Prisma.ProductFindManyArgs>
   ) {
     const total = await this.prisma.product.count();
-    const data = await this.prisma.product.findMany(args);
+    const data = await this.prisma.product.findMany({
+      ...args,
+      include: {
+        productCategories: {
+          include: {
+            category: true,
+          },
+        },
+      },
+    });
 
     return {
       data,

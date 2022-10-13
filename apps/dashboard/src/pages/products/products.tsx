@@ -4,10 +4,12 @@ import { ArrowDownTrayIcon, ArrowUpTrayIcon } from '@heroicons/react/20/solid';
 const Products = () => {
   const { data } = useProductsQuery({
     variables: {
-      take: 20,
+      take: 3,
       skip: 0,
     },
   });
+
+  console.log(data);
 
   return (
     <div className="h-full overflow-y-auto">
@@ -32,9 +34,7 @@ const Products = () => {
           </button>
         </div>
       </div>
-      <div className="mt-8">
-        <pre>{JSON.stringify(data?.products.data, null, 2)}</pre>
-      </div>
+      <div className="mt-8"></div>
     </div>
   );
 };
