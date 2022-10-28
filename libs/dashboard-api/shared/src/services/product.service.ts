@@ -25,7 +25,7 @@ export class ProductService {
     const data = await this.prisma.product.findMany({
       ...args,
       include: {
-        productCategories: {
+        product_categories: {
           include: {
             category: true,
           },

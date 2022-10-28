@@ -96,7 +96,7 @@ exports[`App should render successfully 1`] = `
         class="flex flex-1 flex-col overflow-y-auto"
       >
         <header
-          class="flex justify-between py-3 px-10 shadow text-gray-500 bg-white sticky z-20"
+          class="flex justify-between py-3 px-10 shadow text-gray-500 bg-white sticky top-0 z-20"
         >
           <div
             class="flex gap-4 items-center"

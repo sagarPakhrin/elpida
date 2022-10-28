@@ -1,15 +1,9 @@
 import { useProductsQuery } from '@elpida/dashboard/hooks';
 import { ArrowDownTrayIcon, ArrowUpTrayIcon } from '@heroicons/react/20/solid';
+import ProductsTable from './products-table';
 
 const Products = () => {
-  const { data } = useProductsQuery({
-    variables: {
-      take: 3,
-      skip: 0,
-    },
-  });
-
-  console.log(data);
+  const { data } = useProductsQuery();
 
   return (
     <div className="h-full overflow-y-auto">
@@ -34,7 +28,9 @@ const Products = () => {
           </button>
         </div>
       </div>
-      <div className="mt-8"></div>
+      <div className="mt-8">
+        <ProductsTable products={data?.products.data ?? []} />
+      </div>
     </div>
   );
 };
