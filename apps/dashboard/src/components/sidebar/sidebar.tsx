@@ -1,4 +1,4 @@
-import { classNames } from '@elpida/ui';
+import { classNames } from '@elpida/shared/utils';
 import {
   ArrowRightOnRectangleIcon,
   PresentationChartBarIcon,

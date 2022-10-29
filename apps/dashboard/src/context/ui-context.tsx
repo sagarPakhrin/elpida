@@ -1,9 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import {
-  createStrictContext,
-  useLocalStorage,
-  useWindowSize,
-} from '@elpida/ui';
+import { createStrictContext } from '@elpida/ui';
+import { useLocalStorage, useWindowSize } from '@elpida/shared/hooks';
 import { useEffect } from 'react';
 
 export interface UiState {

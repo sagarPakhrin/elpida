@@ -19,6 +19,7 @@
         "libs/dashboard-api/shared/src/index.ts"
       ],
       "@elpida/dashboard/hooks": ["libs/dashboard/hooks/src/index.ts"],
+      "@elpida/shared/hooks": ["libs/shared/hooks/src/index.ts"],
       "@elpida/shared/nest-libs": ["libs/shared/nest-libs/src/index.ts"],
       "@elpida/shared/utils": ["libs/shared/utils/src/index.ts"],
       "@elpida/ui": ["libs/ui/src/index.ts"]
