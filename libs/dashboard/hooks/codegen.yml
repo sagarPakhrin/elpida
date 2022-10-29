@@ -1,0 +1,9 @@
+overwrite: true
+schema: ${NX_GRAPHQL_URL}
+documents: './graphql/**/*.{gql,graphql}'
+generates:
+  ./src/gql/schema.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'

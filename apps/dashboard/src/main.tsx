@@ -1,7 +1,8 @@
+import { ApolloProvider } from '@apollo/client';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-
 import { BrowserRouter } from 'react-router-dom';
+import { client } from './apollo/client';
 import App from './app/app';
 import { UiProvider } from './context/ui-context';
 
@@ -11,9 +12,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <StrictMode>
     <BrowserRouter>
-      <UiProvider>
-        <App />
-      </UiProvider>
+      <ApolloProvider client={client}>
+        <UiProvider>
+          <App />
+        </UiProvider>
+      </ApolloProvider>
     </BrowserRouter>
   </StrictMode>
 );

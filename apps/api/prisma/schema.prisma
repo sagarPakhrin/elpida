@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id                 Int               @id @default(autoincrement())
+  name               String            @db.Char(50)
+  slug               String            @unique @db.Char(50)
+  description        String
+  is_active          Boolean           @default(true)
+  meta_keywords      String
+  meta_description   String
+  created_at         DateTime          @default(now())
+  updated_at         DateTime          @updatedAt
+  product_categories ProductCategory[]
+
+  @@map("category")
+}
+
+model Product {
+  id                 Int               @id @default(autoincrement())
+  name               String
+  slug               String            @unique
+  brand              String
+  sku                String
+  price              Float
+  old_price          Float?
+  is_active          Boolean           @default(true)
+  is_bestseller      Boolean           @default(false)
+  is_featured        Boolean           @default(false)
+  quantity           Int
+  description        String
+  meta_keywords      String
+  meta_description   String
+  created_at         DateTime          @default(now())
+  updated_at         DateTime          @updatedAt
+  product_categories ProductCategory[]
+
+  @@map("product")
+}
+
+model ProductCategory {
+  product     Product  @relation(fields: [product_id], references: [id])
+  product_id  Int
+  category    Category @relation(fields: [category_id], references: [id])
+  category_id Int
+
+  @@id([product_id, category_id])
+  @@map("product_categories")
+}

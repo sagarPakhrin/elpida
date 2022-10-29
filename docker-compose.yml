@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  # React App
+  dashboard:
+    extends:
+      file: docker-compose.base.yml
+      service: nx-base-app
+    container_name: dashboard_fe
+    command: npm start dashboard
+    ports:
+      - 3000:3000
+  api:
+    extends:
+      file: docker-compose.base.yml
+      service: nx-base-app
+    container_name: dashboard_api
+    depends_on:
+      - db
+    command: npm start api
+    ports:
+      - 5000:5000
+
+  db:
+    image: postgres
+    container_name: elpida_db
+    ports:
+      - 5432:5432
+    env_file: .env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
