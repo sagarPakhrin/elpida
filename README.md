@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/sagarPakhrin/elpida/actions/workflows/ci.yml/badge.svg)
 
-Experimantal projects
+An opensource monorepo with sample applications built with typescript, nestjs, react, graphql
 
 ## Setup guide
 
@@ -15,6 +15,9 @@ npm start
 
 ## Techstacks
 
-1. React (frontend)
-2. tailwindcss (css)
-3. nx (monorepo)
+- tyepscript
+- React
+- tailwindcss (css)
+- nx (monorepo)
+- prisma
+- graphql
