@@ -1,6 +1,7 @@
 import { useProductsQuery } from '@elpida/dashboard/hooks';
 import { ArrowDownTrayIcon, ArrowUpTrayIcon } from '@heroicons/react/20/solid';
 import ProductsTable from './products-table';
+import { Pagination } from '@elpida/dashboard/components';
 
 const Products = () => {
   const { data } = useProductsQuery();
@@ -30,6 +31,7 @@ const Products = () => {
       </div>
       <div className="mt-8">
         <ProductsTable products={data?.products.data ?? []} />
+        <Pagination total={data?.products.meta.total} size={10} />
       </div>
     </div>
   );

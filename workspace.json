@@ -5,6 +5,7 @@
     "api": "apps/api",
     "dashboard": "apps/dashboard",
     "dashboard-api-shared": "libs/dashboard-api/shared",
+    "dashboard-components": "libs/dashboard/components",
     "dashboard-e2e": "apps/dashboard-e2e",
     "dashboard-hooks": "libs/dashboard/hooks",
     "shared-hooks": "libs/shared/hooks",

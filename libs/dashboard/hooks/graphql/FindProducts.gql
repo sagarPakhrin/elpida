@@ -9,5 +9,8 @@ query products($take: Float, $skip: Float) {
         }
       }
     }
+    meta {
+      total
+    }
   }
 }

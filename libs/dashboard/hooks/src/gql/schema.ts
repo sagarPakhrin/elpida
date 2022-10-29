@@ -88,6 +88,7 @@ export type ProductsQuery = {
         category: { __typename?: 'Category'; name: string };
       }>;
     }>;
+    meta: { __typename?: 'PaginationMetaData'; total: number };
   };
 };
 
@@ -102,6 +103,9 @@ export const ProductsDocument = gql`
             name
           }
         }
+      }
+      meta {
+        total
       }
     }
   }
